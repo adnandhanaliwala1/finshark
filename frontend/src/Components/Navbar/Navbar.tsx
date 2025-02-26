@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -8,12 +9,14 @@ const Navbar = (props: Props) => {
   return (
     <nav className="relative container mx-auto p-6">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-20">
-          <img src={logo} alt="" />
+        <div className="flex items-center space-x-2s0">
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
           <div className="hidden font-bold lg:flex">
-            <a href="" className="text-black hover:text-darkBlue">
-              Dashboard
-            </a>
+            <Link to="/search" className="text-black hover:text-darkBlue">
+              Search
+            </Link>
           </div>
         </div>
         <div className="hidden lg:flex items-center space-x-6 text-back">
